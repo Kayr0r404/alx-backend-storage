@@ -15,6 +15,9 @@ BEGIN
         UPDATE users
         SET valid_email = 0
         WHERE email = NEW.email;
+    else
+        set valid_email = OLD.valid_email
+        where email = new.email
     END IF;
 END $$
 

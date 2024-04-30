@@ -1,0 +1,3 @@
+// listt all documets
+
+db.school.find()

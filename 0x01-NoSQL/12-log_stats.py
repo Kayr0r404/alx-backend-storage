@@ -13,7 +13,7 @@ def log_stats():
     print("methods:")
     for method in methods:
         print(
-            "\t method {}: {}".format(
+            "\tmethod {}: {}".format(
                 method, db.nginx.count_documents({"method": method})
             )
         )

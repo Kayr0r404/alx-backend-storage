@@ -1,7 +1,5 @@
 // Update multiple documents in the 'school' collection
+
 db.school.updateMany(
-    // Filter to match documents with name: "Holberton school"
-    { name: "Holberton school" },
-    // Specify the update operation with $set to update existing fields
-    { $set: { address: "972 Mission street" } }
+    { name: "Holberton school" }, { $set: { address: "972 Mission street" }, {multi: true}}
   );

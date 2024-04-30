@@ -10,7 +10,7 @@ def log_stats():
     db = client.logs
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print("{} logs".format(db.nginx.count_documents({})))
-    print("methods:")
+    print("Methods:")
     for method in methods:
         print(
             "\tmethod {}: {}".format(

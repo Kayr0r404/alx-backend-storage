@@ -29,10 +29,11 @@ def log_stats():
             {"$limit": 10},
         ]
     )
-    print(type(collection))
 
-    for i in cursor:
-        print((i))
+    for document in cursor:
+        ip = document.get("_id")
+        ip_logs_count = document.get("same ip")
+        print(f"\t{ip}: {ip_logs_count}")
 
 
 if __name__ == "__main__":
